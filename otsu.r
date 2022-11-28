@@ -1,6 +1,6 @@
 # Read in the data from the excel files
 library("readxl")
-balanced <- read_excel("MA-2/MergedSample.xlsx", sheet = "MergedSample")
+balanced <- read_excel("balanced_points.xlsx", sheet = "MergedSample")
 unbalanced <- read_excel("unbalanced_points.xls")
 
 # data is the dataset (a vector of numbers), num_bins is
