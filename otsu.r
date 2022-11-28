@@ -31,6 +31,10 @@ otsu <- function(data, num_bins) {
     results[i] <- wcv
   }
 
+  # Find the index of the smallest within-class variance
+  threshold_index <- which.min(na.omit(results[2:length(results)]))
+  # Get the corresponding threshold at that index
+  threshold <- histogram$breaks[threshold_index]
   # Plot the threshold as a vertical line
   abline(v = threshold)
   threshold
